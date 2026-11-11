@@ -1,14 +1,18 @@
 # Harshendra Karwani — Portfolio
 
-A responsive, static portfolio for AI-assisted web development, selected client work, enterprise Tableau operations, and an Arduino crop-protection prototype.
+A responsive, Netflix-inspired portfolio for AI-assisted web development. Visitors choose a **Projects**, **Skills**, or **Experience** profile, then browse horizontal shelves and open cards for full details.
 
 ## Preview locally
 
-Open `index.html` in a browser.
+Open `index.html` in a browser. The site uses plain HTML, CSS, and JavaScript and needs no build step.
 
-## Deploy on GitHub Pages
+## Deployment
 
-Upload the contents of this folder to a GitHub repository, then open **Settings → Pages** and select **Deploy from a branch**, branch `main`, folder `/ (root)`. GitHub Pages will provide the public URL.
+The public site is deployed on Vercel and linked to the `main` branch of this repository. Pushes to `main` trigger a new deployment.
 
-The site uses plain HTML and CSS and requires no build step.
+## Portfolio content
 
+- Independent products: Guestora and Vendiapa
+- Digital Hammerr client websites and SEO work
+- Accenture Tableau administration, automation, upgrades, and SSL coordination
+- Skills, integrations, and an Arduino crop-protection prototype
