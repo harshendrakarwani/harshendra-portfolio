@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080809" />
+    <meta name="description" content="Harshendra Karwani — AI-assisted web developer. Explore selected projects, skills, and experience." />
+    <meta property="og:title" content="Harshendra Karwani — Web Developer" />
+    <meta property="og:description" content="Selected AI-assisted web development projects, client websites, and enterprise automation work." />
+    <title>Harshendra Karwani — Web Developer</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #080809;
+        --panel: #151516;
+        --panel-hi: #202022;
+        --white: #f5f4f1;
+        --soft: #b7b5b3;
+        --muted: #858383;
+        --red: #e50914;
+        --line: #ffffff1d;
+        --content: 1180px;
+        --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; background: var(--bg); }
+      body { margin: 0; color: var(--white); background: var(--bg); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; }
+      .page { overflow: hidden; }
+      .wrap { width: min(var(--content), calc(100% - 64px)); margin-inline: auto; }
+      .topbar { position: absolute; z-index: 10; top: 0; left: 0; width: 100%; background: linear-gradient(#080809e8, #08080900); }
+      .nav { min-height: 76px; display: flex; align-items: center; gap: 34px; }
+      .brand { display: flex; align-items: center; gap: 9px; margin-right: 10px; text-decoration: none; }
+      .brand-icon { display: grid; width: 29px; height: 34px; place-items: center; border-radius: 4px; background: var(--red); color: white; font-size: 17px; font-weight: 900; letter-spacing: -.08em; }
+      .brand-name { color: var(--white); font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+      .nav-links { display: flex; gap: 24px; align-items: center; }
+      .nav-links a { color: #e3e1df; font-size: 12px; text-decoration: none; transition: color .2s; }
+      .nav-links a:hover { color: white; }
+      .nav-right { margin-left: auto; color: #e3e1df; font-size: 11px; }
+
+      .hero { min-height: 660px; position: relative; display: flex; align-items: flex-end; padding: 150px 0 92px; isolation: isolate; }
+      .hero::before { position: absolute; z-index: -2; inset: 0; content: ""; background: radial-gradient(ellipse at 72% 28%, #7a101a9c 0, #2610146c 20%, transparent 51%), radial-gradient(ellipse at 88% 68%, #29324b80 0, transparent 34%), linear-gradient(90deg, #080809 5%, #080809e8 40%, #08080930 100%), linear-gradient(0deg, var(--bg) 0%, transparent 42%); }
+      .hero::after { position: absolute; z-index: -3; inset: 0; content: ""; background: linear-gradient(135deg, #131315, #09090b 55%, #19151a); }
+      .hero-content { max-width: 690px; }
+      .eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; color: #e3e0dd; font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+      .eyebrow-mark { color: var(--red); font-size: 15px; }
+      h1 { margin: 0; font-size: clamp(54px, 8vw, 91px); line-height: .92; letter-spacing: -.075em; font-weight: 850; text-transform: uppercase; }
+      .hero-role { margin: 20px 0 12px; color: #fff; font-size: clamp(17px, 2.3vw, 23px); font-weight: 650; letter-spacing: -.025em; }
+      .hero-copy { max-width: 600px; margin: 0; color: #e0dedc; font-size: 15px; line-height: 1.65; }
+      .hero-meta { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; margin-top: 17px; color: #cfcdca; font-size: 11px; }
+      .meta-badge { padding: 5px 8px; border: 1px solid #ffffff48; border-radius: 3px; color: white; font-size: 9px; font-weight: 800; letter-spacing: .09em; }
+      .meta-sep { color: #8d8988; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+      .btn { display: inline-flex; min-height: 43px; align-items: center; justify-content: center; gap: 9px; padding: 0 17px; border: 0; border-radius: 4px; font: inherit; font-size: 12px; font-weight: 750; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+      .btn:hover { transform: translateY(-2px); }
+      .btn-primary { background: var(--white); color: #101011; }
+      .btn-primary:hover { background: #d7d5d2; }
+      .btn-secondary { background: #585757b8; color: white; }
+      .btn-secondary:hover { background: #737171; }
+      .btn-symbol { font-size: 17px; line-height: 0; }
+
+      main { position: relative; z-index: 1; margin-top: -35px; }
+      .shelf { margin-bottom: 51px; }
+      .shelf-heading { display: flex; align-items: baseline; gap: 12px; margin-bottom: 15px; }
+      .shelf-heading h2 { margin: 0; font-size: 19px; letter-spacing: -.035em; }
+      .shelf-heading span { color: var(--muted); font-size: 10px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+      .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; }
+      .project-card { overflow: hidden; border: 1px solid #ffffff13; border-radius: 5px; background: var(--panel); box-shadow: 0 8px 25px #0005; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+      .project-card:hover { transform: translateY(-4px); border-color: #ffffff3d; box-shadow: 0 16px 35px #0008; }
+      .poster { min-height: 228px; position: relative; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 19px 21px; }
+      .poster::before, .poster::after { position: absolute; content: ""; pointer-events: none; }
+      .guestora-poster { background: radial-gradient(ellipse at 77% 35%, #2c6b6d 0, #183638 19%, transparent 55%), linear-gradient(125deg, #10191a 10%, #142122 60%, #0b1214); }
+      .guestora-poster::before { width: 210px; height: 210px; right: -23px; bottom: -95px; border: 1px solid #b7e9d254; border-radius: 50%; box-shadow: 0 0 0 18px #b7e9d20a, 0 0 0 40px #b7e9d20a; }
+      .vendiapa-poster { background: radial-gradient(ellipse at 77% 30%, #996123 0, #573b20 25%, transparent 57%), linear-gradient(120deg, #14120e, #262018 57%, #10100e); }
+      .vendiapa-poster::before { width: 170px; height: 240px; right: 48px; bottom: -43px; border: 1px solid #f3d39973; border-radius: 18px 18px 9px 9px; transform: rotate(8deg); box-shadow: inset 0 0 35px #e0af4d1c; }
+      .vendiapa-poster::after { width: 133px; height: 3px; right: 68px; bottom: 75px; background: #f3d399a1; transform: rotate(8deg); box-shadow: 0 13px #f3d3997a, 0 26px #f3d39955; }
+      .client-axxot { background: radial-gradient(ellipse at 78% 35%, #1d7f8d 0, #15424b 25%, transparent 58%), linear-gradient(125deg, #0b1619, #142528 65%, #091113); }
+      .client-smfev { background: radial-gradient(ellipse at 78% 35%, #668d3f 0, #344923 25%, transparent 58%), linear-gradient(125deg, #12180f, #1d2918 65%, #0b1009); }
+      .client-kesar { background: radial-gradient(ellipse at 78% 35%, #af7445 0, #573b2b 25%, transparent 58%), linear-gradient(125deg, #1a1410, #30231b 65%, #100e0c); }
+      .client-pacific { background: radial-gradient(ellipse at 78% 35%, #3d7588 0, #203c48 25%, transparent 58%), linear-gradient(125deg, #101719, #1a272b 65%, #0b1012); }
+      .client-shini { background: radial-gradient(ellipse at 78% 35%, #4266ab 0, #25385e 25%, transparent 58%), linear-gradient(125deg, #11131b, #1a2032 65%, #0b0d12); }
+      .client-poster::before { width: 210px; height: 210px; right: -23px; bottom: -95px; border: 1px solid #ffffff42; border-radius: 50%; box-shadow: 0 0 0 18px #ffffff0a, 0 0 0 40px #ffffff0a; }
+      .poster-top, .poster-bottom, .poster-copy { position: relative; z-index: 1; }
+      .poster-top, .poster-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .poster-wordmark { font-size: 12px; font-weight: 850; letter-spacing: .13em; }
+      .poster-id { color: #ffffff9b; font-size: 9px; font-weight: 750; letter-spacing: .17em; }
+      .poster-copy { max-width: 76%; margin: 26px 0; }
+      .poster-type { color: #ffffffa9; font-size: 9px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+      .poster-title { margin: 8px 0 0; font-size: clamp(25px, 3vw, 38px); line-height: 1; letter-spacing: -.06em; font-weight: 780; }
+      .poster-bottom { color: #ebe8e2; font-size: 9px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
+      .card-content { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; padding: 17px 19px 19px; }
+      .card-content h3 { margin: 0 0 6px; font-size: 17px; letter-spacing: -.035em; }
+      .card-content p { max-width: 640px; margin: 0; color: #c3c1bf; font-size: 11px; line-height: 1.6; }
+      .card-open { display: grid; width: 35px; height: 35px; place-items: center; border: 1px solid #ffffff45; border-radius: 50%; color: white; font-size: 14px; text-decoration: none; transition: background .2s; }
+      .card-open:hover { background: var(--red); border-color: var(--red); }
+      .card-tags { display: flex; flex-wrap: wrap; gap: 6px; grid-column: 1 / -1; margin-top: 3px; }
+      .tag { padding: 5px 7px; border-radius: 2px; background: #ffffff10; color: #d4d2d0; font-size: 9px; }
+
+      .resume-section { display: grid; grid-template-columns: .65fr 1.35fr; gap: 30px; padding: 25px 0 58px; border-top: 1px solid var(--line); }
+      .section-title { margin: 0; font-size: 19px; letter-spacing: -.035em; }
+      .section-subtitle { margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.55; }
+      .timeline { border-left: 1px solid #ffffff30; padding-left: 22px; }
+      .role { position: relative; padding: 0 0 23px; }
+      .role:last-child { padding-bottom: 0; }
+      .role::before { position: absolute; top: 5px; left: -27px; width: 9px; height: 9px; border: 2px solid var(--bg); border-radius: 50%; background: var(--red); content: ""; }
+      .role-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 7px 16px; align-items: baseline; }
+      .role h3 { margin: 0; font-size: 14px; letter-spacing: -.015em; }
+      .role-date { color: var(--muted); font-size: 10px; }
+      .role-org { margin: 5px 0 8px; color: #d4d2d0; font-size: 11px; }
+      .role-copy { max-width: 690px; margin: 0; color: #aaa8a6; font-size: 11px; line-height: 1.65; }
+
+      .skills { padding: 25px 0 53px; border-top: 1px solid var(--line); }
+      .skill-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 17px; }
+      .skill-group { min-height: 106px; padding: 15px; border: 1px solid #ffffff14; border-radius: 4px; background: #121213; }
+      .skill-group h3 { margin: 0 0 11px; color: #f0efed; font-size: 11px; }
+      .skill-group p { margin: 0; color: #aaa8a6; font-size: 10px; line-height: 1.8; }
+      .contact { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 30px; padding: 25px; border: 1px solid #ffffff19; border-radius: 5px; background: linear-gradient(115deg, #181819, #101011); }
+      .contact h2 { margin: 0; font-size: clamp(19px, 3vw, 26px); letter-spacing: -.04em; }
+      .contact p { margin: 7px 0 0; color: var(--muted); font-size: 11px; }
+      footer { display: flex; justify-content: space-between; gap: 18px; padding: 19px 0 26px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; }
+      :focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+      @media (max-width: 760px) {
+        .wrap { width: min(var(--content), calc(100% - 34px)); }
+        .nav { min-height: 66px; gap: 16px; }
+        .brand { margin-right: 0; }
+        .nav-links { gap: 13px; }
+        .nav-links a { font-size: 10px; }
+        .nav-links a:nth-child(3) { display: none; }
+        .nav-right { display: none; }
+        .hero { min-height: 650px; padding: 145px 0 89px; }
+        .hero::before { background: radial-gradient(ellipse at 79% 22%, #7a101a8c 0, transparent 42%), linear-gradient(90deg, #080809 2%, #080809b8 70%, #08080959), linear-gradient(0deg, var(--bg), transparent 62%); }
+        .project-grid { grid-template-columns: 1fr; }
+        .poster { min-height: 215px; }
+        .resume-section { grid-template-columns: 1fr; gap: 22px; }
+        .skill-groups { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 430px) {
+        .brand-name { font-size: 10px; }
+        .brand-icon { width: 26px; height: 30px; }
+        .nav { gap: 12px; }
+        .nav-links { gap: 11px; }
+        .hero { min-height: 610px; }
+        .hero-copy { font-size: 13px; }
+        .btn { min-height: 41px; padding: 0 13px; font-size: 11px; }
+        .contact { align-items: flex-start; flex-direction: column; }
+        footer { flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="wrap nav">
+          <a class="brand" href="#home" aria-label="Harshendra Karwani home"><span class="brand-icon" aria-hidden="true">H</span><span class="brand-name">Harshendra Karwani</span></a>
+          <nav class="nav-links" aria-label="Main navigation"><a href="#home">Home</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a></nav>
+          <a class="nav-right" href="#contact">Let’s connect&nbsp; ↗</a>
+        </div>
+      </header>
+
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="wrap hero-content">
+          <div class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">▰</span> AI-assisted web development · selected work</div>
+          <h1 id="hero-title">Harshendra<br />Karwani</h1>
+          <p class="hero-role">AI-Assisted Web Developer</p>
+          <p class="hero-copy">I build responsive websites and web applications, using AI-assisted workflows to prototype, refine, and ship useful product experiences.</p>
+          <div class="hero-meta"><span class="meta-badge">WEB DEVELOPER</span><span>Next.js</span><span class="meta-sep">•</span><span>React</span><span class="meta-sep">•</span><span>AI-assisted workflows</span><span class="meta-sep">•</span><span>Udaipur, India</span></div>
+          <div class="hero-actions"><a class="btn btn-primary" href="#projects"><span class="btn-symbol" aria-hidden="true">▶</span> View featured work</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/harshendra-karwani-1b2b5020b/" target="_blank" rel="noreferrer"><span class="btn-symbol" aria-hidden="true">↗</span> LinkedIn profile</a></div>
+        </div>
+      </section>
+
+      <main class="wrap">
+        <section id="projects" class="shelf" aria-labelledby="projects-title">
+          <div class="shelf-heading"><h2 id="projects-title">Featured projects</h2><span>Selected work</span></div>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="poster guestora-poster" aria-label="Guestora project cover artwork">
+                <div class="poster-top"><span class="poster-wordmark">GUESTORA</span><span class="poster-id">FEATURE 01</span></div>
+                <div class="poster-copy"><div class="poster-type">Event discovery platform</div><div class="poster-title">Find your next<br />great night out.</div></div>
+                <div class="poster-bottom"><span>Discover · Apply · Check in</span><span>Web app</span></div>
+              </div>
+              <div class="card-content"><div><h3>Guestora</h3><p>Event discovery and guest-list management for guests and organizers, with review workflows, QR check-in, and integrated payments.</p></div><a class="card-open" href="https://guestora.in" target="_blank" rel="noreferrer" aria-label="Open Guestora website">↗</a><div class="card-tags"><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">Razorpay</span><span class="tag">Cashfree</span><span class="tag">QR check-in</span></div></div>
+            </article>
+            <article class="project-card">
+              <div class="poster vendiapa-poster" aria-label="Vendiapa project cover artwork">
+                <div class="poster-top"><span class="poster-wordmark">VENDIAPA</span><span class="poster-id">FEATURE 02</span></div>
+                <div class="poster-copy"><div class="poster-type">Protein vending machines</div><div class="poster-title">Smart protein.<br />On demand.</div></div>
+                <div class="poster-bottom"><span>Host · Estimate · Grow</span><span>Product site</span></div>
+              </div>
+              <div class="card-content"><div><h3>Vendiapa</h3><p>A product website for protein vending machines, with a revenue estimator and enquiry flow for businesses interested in hosting a machine.</p></div><a class="card-open" href="https://vendiapa.in" target="_blank" rel="noreferrer" aria-label="Open Vendiapa website">↗</a><div class="card-tags"><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">Supabase</span><span class="tag">Vercel</span><span class="tag">Responsive UI</span></div></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="shelf" aria-labelledby="client-work-title">
+          <div class="shelf-heading"><h2 id="client-work-title">Client websites</h2><span>Digital Hammerr · selected work</span></div>
+          <div class="project-grid">
+            <article class="project-card"><div class="poster client-poster client-axxot"><div class="poster-top"><span class="poster-wordmark">AXXOT · BLUE CHARGE</span><span class="poster-id">CLIENT 01</span></div><div class="poster-copy"><div class="poster-type">EV charging solutions</div><div class="poster-title">Powering a<br />cleaner drive.</div></div><div class="poster-bottom"><span>Products · Solutions</span><span>Corporate site</span></div></div><div class="card-content"><div><h3>Axxot Systems</h3><p>Designed and developed a product-focused website presenting EV charging solutions, company information, and customer enquiry paths.</p></div><a class="card-open" href="https://www.axxot.com/" target="_blank" rel="noreferrer" aria-label="Open Axxot Systems website">↗</a><div class="card-tags"><span class="tag">Web design</span><span class="tag">WordPress</span><span class="tag">On-page SEO</span></div></div></article>
+            <article class="project-card"><div class="poster client-poster client-smfev"><div class="poster-top"><span class="poster-wordmark">SMFEV</span><span class="poster-id">CLIENT 02</span></div><div class="poster-copy"><div class="poster-type">Electric mobility</div><div class="poster-title">Charging made<br />easy to evolve.</div></div><div class="poster-bottom"><span>Home · Business · Portable</span><span>Service site</span></div></div><div class="card-content"><div><h3>SMFEV</h3><p>Built a responsive web presence for EV charging products and services, with clear service information and direct enquiry options.</p></div><a class="card-open" href="https://smfev.com/" target="_blank" rel="noreferrer" aria-label="Open SMFEV website">↗</a><div class="card-tags"><span class="tag">Web design</span><span class="tag">Web development</span><span class="tag">SEO</span></div></div></article>
+            <article class="project-card"><div class="poster client-poster client-kesar"><div class="poster-top"><span class="poster-wordmark">KESAR HOLIDAY</span><span class="poster-id">CLIENT 03</span></div><div class="poster-copy"><div class="poster-type">Travel & experiences</div><div class="poster-title">Plan a trip<br />to remember.</div></div><div class="poster-bottom"><span>Explore · Plan · Enquire</span><span>Travel site</span></div></div><div class="card-content"><div><h3>Kesar Holiday</h3><p>Created a travel website to showcase tours and destinations, organize package information, and make it easier for visitors to enquire.</p></div><a class="card-open" href="http://kesarholiday.com/" target="_blank" rel="noreferrer" aria-label="Open Kesar Holiday website">↗</a><div class="card-tags"><span class="tag">Web design</span><span class="tag">Responsive design</span><span class="tag">On-page SEO</span></div></div></article>
+            <article class="project-card"><div class="poster client-poster client-pacific"><div class="poster-top"><span class="poster-wordmark">PACIFIC BULK BAGS</span><span class="poster-id">CLIENT 04</span></div><div class="poster-copy"><div class="poster-type">Industrial packaging</div><div class="poster-title">Packaging for<br />every industry.</div></div><div class="poster-bottom"><span>Products · Applications</span><span>B2B website</span></div></div><div class="card-content"><div><h3>Pacific Bulk Bags</h3><p>Structured a B2B website to present FIBC and woven packaging products, explain industry applications, and help buyers find relevant information.</p></div><a class="card-open" href="https://pacificbulkbags.com/" target="_blank" rel="noreferrer" aria-label="Open Pacific Bulk Bags website">↗</a><div class="card-tags"><span class="tag">Web development</span><span class="tag">B2B website</span><span class="tag">SEO</span></div></div></article>
+            <article class="project-card"><div class="poster client-poster client-shini"><div class="poster-top"><span class="poster-wordmark">SHINI SOFTWARE SOLUTION</span><span class="poster-id">CLIENT 05</span></div><div class="poster-copy"><div class="poster-type">Software & digital services</div><div class="poster-title">Ideas into<br />digital products.</div></div><div class="poster-bottom"><span>Services · Enquiries</span><span>Agency website</span></div></div><div class="card-content"><div><h3>Shini Software Solution</h3><p>Developed a corporate website to present software, web, mobile, and digital marketing services with straightforward paths for prospective clients.</p></div><a class="card-open" href="https://shinisoftwaresolution.com/" target="_blank" rel="noreferrer" aria-label="Open Shini Software Solution website">↗</a><div class="card-tags"><span class="tag">Web design</span><span class="tag">WordPress</span><span class="tag">SEO</span></div></div></article>
+          </div>
+        </section>
+
+        <section class="resume-section" aria-labelledby="innovation-title">
+          <div><h2 id="innovation-title" class="section-title">Engineering project</h2><div class="section-subtitle">A prototype combining crop protection and water reuse.</div></div>
+          <div class="timeline"><article class="role"><div class="role-top"><h3>Arduino Rain-Responsive Crop Protection System</h3><span class="role-date">Academic project</span></div><div class="role-org">Embedded systems · Sustainable agriculture</div><p class="role-copy">Built a prototype using an Arduino Uno and water droplet sensor to detect rain and trigger LED and buzzer alerts. Motors operated a polycarbonate canopy supported by four pillars to cover crops during heavy rain; the sheet directed runoff into a tank for later use. Combined sensing, alerts, motor control, and rainwater harvesting in one system.</p></article></div>
+        </section>
+
+        <section id="experience" class="resume-section" aria-labelledby="experience-title">
+          <div><h2 id="experience-title" class="section-title">Experience</h2><div class="section-subtitle">Product building, enterprise support, and delivery.</div></div>
+          <div class="timeline">
+            <article class="role"><div class="role-top"><h3>Freelance Web Designer & Developer</h3><span class="role-date">2026 — Present</span></div><div class="role-org">Independent · Udaipur, India</div><p class="role-copy">Building Guestora and Vendiapa with responsive user flows, payments and backend integrations, AI-assisted iteration, and production deployments.</p></article>
+            <article class="role"><div class="role-top"><h3>Packaged App Development Associate</h3><span class="role-date">2023 — 2026</span></div><div class="role-org">Accenture · Pune, India</div><p class="role-copy">Administered Tableau Server and Cloud environments and supported enterprise analytics operations. Worked with Tableau REST APIs and Postman on administration and automation, including Creator license inactivity monitoring and reclamation. Supported Server upgrade and SSL certificate change activities across APAC, EMEA, and AMER in DEV, PROD, and SBX environments, coordinating readiness, communication, and validation.</p></article>
+            <article class="role"><div class="role-top"><h3>WordPress Developer Intern</h3><span class="role-date">2022 — 2023</span></div><div class="role-org">Digital Hammerr · Udaipur, India</div><p class="role-copy">Designed, developed, and maintained responsive WordPress websites for clients, customizing layouts and supporting on-page SEO, keyword optimization, Google Analytics, Google Search Console, and page-speed improvements. Selected client projects are featured above.</p></article>
+          </div>
+        </section>
+
+        <section id="skills" class="skills" aria-labelledby="skills-title">
+          <div class="shelf-heading"><h2 id="skills-title">Skills & toolkit</h2><span>What I bring to a build</span></div>
+          <div class="skill-groups">
+            <article class="skill-group"><h3>Web development</h3><p>Next.js · React · HTML · CSS · WordPress · Elementor · Responsive design · Web applications</p></article>
+            <article class="skill-group"><h3>Integrations & enterprise</h3><p>Supabase · Razorpay · Cashfree · REST APIs · Resend · SMTP · Vercel · Tableau REST API · Postman</p></article>
+            <article class="skill-group"><h3>AI-assisted workflow</h3><p>AI-assisted development · Rapid prototyping · SEO · Google Analytics · Search Console · Tableau administration · License management · Upgrade coordination</p></article>
+          </div>
+        </section>
+
+        <section id="contact" class="contact" aria-labelledby="contact-title"><div><h2 id="contact-title">Next up: a useful idea worth building.</h2><p>Based in Udaipur, India · Open to web development opportunities</p></div><a class="btn btn-primary" href="https://www.linkedin.com/in/harshendra-karwani-1b2b5020b/" target="_blank" rel="noreferrer">Connect on LinkedIn <span class="btn-symbol" aria-hidden="true">↗</span></a></section>
+      </main>
+
+      <footer class="wrap"><span>© 2026 Harshendra Karwani</span><span>AI-assisted web development · Udaipur, India</span></footer>
+    </div>
+  </body>
+</html>
+
